@@ -1,0 +1,6 @@
+package cn.e3mall.search.service;
+
+public interface SearchItemService {
+	E3Result importAllItems();
+
+}

@@ -1,0 +1,67 @@
+package jedis;
+
+import java.util.List;
+
+public class JedisClientPool implements JedisClient {
+
+	public String set(String key, String value) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public String get(String key) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Boolean exists(String key) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Long expire(String key, int seconds) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Long ttl(String key) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Long incr(String key) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Long hset(String key, String field, String value) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public String hget(String key, String field) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Long hdel(String key, String... field) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Boolean hexists(String key, String field) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public List<String> hvals(String key) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Long del(String key) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="utils.EasyUIResult"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.core.SerializableString"/>
+<fullyQualifiedTypeName name="com.alibaba.dubbo.config.annotation.Service"/>
+<fullyQualifiedTypeName name="com.alibaba.druid.filter.AutoLoad"/>
+<fullyQualifiedTypeName name="org.apache.zookeeper.Op.Create"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="cn.e3mall.content.service.ContentCategoryService"/>
+<fullyQualifiedTypeName name="pojo.EasyUITreeNode"/>
+<fullyQualifiedTypeName name="cn.e3mall.content.service.impl.ContentCategoryServiceImpl"/>
+<fullyQualifiedTypeName name="cn.e3mall.pojo.TbContentCategory"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+<fullyQualifiedTypeName name="java.lang.Long"/>
+<fullyQualifiedTypeName name="cn.e3mall.mapper.TbContentCategoryMapper"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="cn.e3mall.mapper.TbContentMapper"/>
+<fullyQualifiedTypeName name="cn.e3mall.content.service.ContentService"/>
+<fullyQualifiedTypeName name="cn.e3mall.pojo.TbContent"/>
+<fullyQualifiedTypeName name="cn.e3mall.pojo.TbContentCategoryExample"/>
+<fullyQualifiedTypeName name="cn.e3mall.pojo.TbContentExample"/>
+<fullyQualifiedTypeName name="redis.clients.jedis.JedisPool"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Value"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="jedis.JedisClient"/>
+<fullyQualifiedTypeName name="org.apache.commons.lang3.StringUtils"/>
+<fullyQualifiedTypeName name="com.alibaba.druid.support.json.JSONUtils"/>
+<fullyQualifiedTypeName name="utils.JsonUtils"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+<fullyQualifiedTypeName name="cn.e3mall.search.mapper.ItemMapper"/>
+<fullyQualifiedTypeName name="org.apache.solr.client.solrj.SolrServer"/>
+<fullyQualifiedTypeName name="org.apache.solr.common.SolrInputDocument"/>
+<fullyQualifiedTypeName name="cn.e3mall.search.service.SearchItemService"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseBody"/>
+<fullyQualifiedTypeName name="cn.e3mall.search.dao.SearchDao"/>
+<fullyQualifiedTypeName name="pojo.SearchResult"/>
+<fullyQualifiedTypeName name="utils.TaotaoResult"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+</qualifiedTypeNameHistroy>

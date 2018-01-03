@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="cn.e3mall.mapper.TbItemMapper"/>
+<fullyQualifiedTypeName name="cn.e3mall.mapper.TbItemCatMapper"/>
+<fullyQualifiedTypeName name="cn.e3mall.service.ItemCatService"/>
+<fullyQualifiedTypeName name="cn.e3mall.pojo.TbItemCatExample"/>
+<fullyQualifiedTypeName name="cn.e3mall.pojo.TbContentCategoryExample.Criteria"/>
+<fullyQualifiedTypeName name="cn.e3mall.pojo.TbItemCatExample.Criteria"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="cn.e3mall.common.pojo.EasyUITreeNode"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.awt.SystemTray"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.ModelAndView"/>
+<fullyQualifiedTypeName name="javax.annotation.Resource"/>
+<fullyQualifiedTypeName name="com.alibaba.dubbo.config.annotation.Service"/>
+<fullyQualifiedTypeName name="com.qiniu.util.Auth"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+<fullyQualifiedTypeName name="cn.e3mall.service.UploadService"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="com.qiniu.storage.Configuration"/>
+<fullyQualifiedTypeName name="com.qiniu.common.Zone"/>
+<fullyQualifiedTypeName name="com.qiniu.storage.UploadManager"/>
+<fullyQualifiedTypeName name="com.qiniu.storage.model.DefaultPutRet"/>
+<fullyQualifiedTypeName name="com.google.gson.Gson"/>
+<fullyQualifiedTypeName name="com.qiniu.common.QiniuException"/>
+<fullyQualifiedTypeName name="com.qiniu.http.Response"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="org.joda.time.DateTime"/>
+<fullyQualifiedTypeName name="org.junit.Test"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseBody"/>
+<fullyQualifiedTypeName name="org.springframework.web.multipart.support.MultipartFilter"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="com.qiniu.util.StringMap"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Value"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+<fullyQualifiedTypeName name="org.springframework.web.multipart.MultipartFile"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="cn.e3mall.common.utils.JsonUtils"/>
+<fullyQualifiedTypeName name="org.springframework.http.MediaType"/>
+</qualifiedTypeNameHistroy>

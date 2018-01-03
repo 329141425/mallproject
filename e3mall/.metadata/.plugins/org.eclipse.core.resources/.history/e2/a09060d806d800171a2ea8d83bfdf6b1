@@ -1,0 +1,141 @@
+package cn.e3mall.service.impl;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.joda.time.DateTime;
+import org.junit.Test;
+import org.springframework.stereotype.Service;
+
+import com.google.gson.Gson;
+import com.qiniu.common.QiniuException;
+import com.qiniu.common.Zone;
+import com.qiniu.http.Response;
+import com.qiniu.storage.Configuration;
+import com.qiniu.storage.UploadManager;
+import com.qiniu.storage.model.DefaultPutRet;
+import com.qiniu.util.Auth;
+import com.qiniu.util.StringMap;
+
+import cn.e3mall.service.UploadService;
+@Service
+public class UploadServiceImpl implements UploadService {
+/**
+ * 获取七牛云上传
+ */
+	
+	public Object getQiniuUptoken() {
+		
+		//构造一个带指定Zone对象的配置类
+		Configuration cfg = new Configuration(Zone.zone0());
+		//...其他参数参考类注释
+		UploadManager uploadManager = new UploadManager(cfg);
+		//...生成上传凭证，然后准备上传
+		String accessKey = "c7yNpO-Nzv2DIHIqmP-WDk_sGxPH3_FrYmArex8I";
+		String secretKey = "00q5MihyGatlWfhwvRELq8hBQMpPGqjfApzGBtMK";
+		String bucket = "dsfsfsdf";
+		//如果是Windows情况下，格式是 D:\\qiniu\\test.png
+		String localFilePath = "F:\\pic\\1.jpg";
+		//默认不指定key的情况下，以文件内容的hash值作为文件名
+		String key = null;
+		Auth auth = Auth.create(accessKey, secretKey);
+		String upToken = auth.uploadToken(bucket);
+		try {
+			Response response = uploadManager.put(localFilePath, key, upToken);
+			MyPutRet myPutRet=(MyPutRet) response.jsonToObject(MyPutRet.class);
+			System.out.println("--------------------------");
+			System.out.println(myPutRet);
+
+			    //解析上传成功的结果
+			  /*  DefaultPutRet putRet = new Gson().fromJson(response.bodyString(), DefaultPutRet.class);*/
+			   /* System.out.println(putRet.key);
+			    System.out.println(putRet.hash);*/
+		} catch (QiniuException ex) {
+			Response r = ex.response;
+		    System.err.println(r.toString());
+		}
+		
+		
+		
+		
+			/*Map<String, Object> data = new HashMap<String, Object>();
+			Auth auth = Auth.create("c7yNpO-Nzv2DIHIqmP-WDk_sGxPH3_FrYmArex8I", "00q5MihyGatlWfhwvRELq8hBQMpPGqjfApzGBtMK");
+			String uptoken = auth.uploadToken("dsfsfsdf");
+			data.put("uptoken", uptoken);
+			System.out.println("---------------------------------------------------------");
+			System.out.println(uptoken);
+			System.out.println("-----------------------------------------------------------");
+			return data;*/
+		
+		return null;
+		}
+	
+public void testqiniu() {
+		
+		//构造一个带指定Zone对象的配置类
+		Configuration cfg = new Configuration(Zone.zone2());
+		//...其他参数参考类注释
+		UploadManager uploadManager = new UploadManager(cfg);
+		//...生成上传凭证，然后准备上传
+		String accessKey = "c7yNpO-Nzv2DIHIqmP-WDk_sGxPH3_FrYmArex8I";
+		String secretKey = "00q5MihyGatlWfhwvRELq8hBQMpPGqjfApzGBtMK";
+		String bucket = "dsfsfsdf";
+		//如果是Windows情况下，格式是 D:\\qiniu\\test.png
+		String localFilePath = "F:\\pic\\4.jpg";
+		//默认不指定key的情况下，以文件内容的hash值作为文件名
+		String key = null;
+		Auth auth = Auth.create(accessKey, secretKey);
+		String upToken = auth.uploadToken(bucket);
+		DateTime dateTime = new DateTime();
+		String filePath ="e3mallupload/"+ dateTime.toString("/yyyy/MM/dd");
+		String token = auth.uploadToken("bucket", null, 3600, new StringMap()
+	            .putNotEmpty("saveKey", "填写你要指定的key"), true);
+		try {
+			 Response response = uploadManager.put(localFilePath, key, upToken);
+			    //解析上传成功的结果
+			 //Response response = uploadManager.put(localFilePath, key, upToken);
+				MyPutRet myPutRet=(MyPutRet) response.jsonToObject(MyPutRet.class);
+				System.out.println("--------------------------");
+				System.out.println(myPutRet);
+				System.out.println("--------------------------");
+				System.out.println(myPutRet.toString());
+
+		} catch (QiniuException ex) {
+			Response r = ex.response;
+		    System.err.println(r.toString());
+		}
+		
+		
+		
+		
+			/*Map<String, Object> data = new HashMap<String, Object>();
+			Auth auth = Auth.create("c7yNpO-Nzv2DIHIqmP-WDk_sGxPH3_FrYmArex8I", "00q5MihyGatlWfhwvRELq8hBQMpPGqjfApzGBtMK");
+			String uptoken = auth.uploadToken("dsfsfsdf");
+			data.put("uptoken", uptoken);
+			System.out.println("---------------------------------------------------------");
+			System.out.println(uptoken);
+			System.out.println("-----------------------------------------------------------");
+			return data;*/
+		
+		}
+	
+	class MyPutRet {
+	    public String key;
+	    public String hash;
+	    public String bucket;
+	    public long fsize;
+		@Override
+		public String toString() {
+			return "MyPutRet [key=" + key + ", hash=" + hash + ", bucket=" + bucket + ", fsize=" + fsize + "]";
+		}
+	    
+	}
+	
+	
+	public void tsdsd() {
+		DateTime dateTime =new DateTime();
+		dateTime.toString("")
+
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;result&apos; from expression &apos;itemService.addItem(item,desc)&apos;&#x0D;&#x0A;- Original project: &apos;e3-manager-web&apos;&#x0D;&#x0A;- Variable name: &apos;result&apos;&#x0D;&#x0A;- Destination method: &apos;cn.e3mall.controller.ItemController.saveItem()&apos;&#x0D;&#x0A;- Variable expression: &apos;itemService.addItem(item,desc)&apos;&#x0D;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;result&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src\/main\/java&lt;cn.e3mall.controller{ItemController.java" name="result" replace="true" selection="1291 0" stamp="1512912441135" version="1.0"/>
+</session>

@@ -1,0 +1,9 @@
+package cn.e3mall.search.service.impl;
+
+import org.springframework.stereotype.Service;
+
+import cn.e3mall.search.service.SearchItemService;
+@Service
+public class SearchItemServiceImpl  implements SearchItemService {
+
+}

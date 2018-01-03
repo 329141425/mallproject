@@ -1,0 +1,7 @@
+1513237650820	Rename package 'cn.e3mall.content'
+1513237655797	Delete element
+1513237896994	Rename package 'cn.e3mall.content.service'
+1513239819452	Extract local variable 'createCriteria'
+1513239895093	Extract local variable 'list'
+1513322834435	Extract local variable 'selectByPrimaryKey'
+1513397258193	Extract local variable 'i'

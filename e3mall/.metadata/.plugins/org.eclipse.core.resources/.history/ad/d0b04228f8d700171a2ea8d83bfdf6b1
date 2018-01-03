@@ -1,0 +1,12 @@
+package cn.e3mall.controller;
+
+import java.io.Serializable;
+
+public class MyPutRet implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 33919016483743107L;
+
+}

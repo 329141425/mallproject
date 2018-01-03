@@ -1,0 +1,8 @@
+package cn.e3mall.search.mapper;
+
+import java.util.List;
+
+public interface ItemMapper {
+	//List<SearchItem> getItemList();
+
+}

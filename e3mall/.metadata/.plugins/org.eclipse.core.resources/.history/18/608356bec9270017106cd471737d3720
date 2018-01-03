@@ -1,0 +1,14 @@
+package cn.itcast.controller;
+
+import cn.itcast.entity.Article;
+
+public class FirstLucene {
+	/***
+	 * 创建索引库方法
+	 */
+	public void createIndexDB() throws Exception{
+		Article article =new Article(1, "培训", "黄森是一家Java培训机构");
+
+	}
+
+}

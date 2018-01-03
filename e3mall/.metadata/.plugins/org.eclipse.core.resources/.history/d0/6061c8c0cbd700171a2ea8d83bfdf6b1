@@ -1,0 +1,161 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>测试七牛云上传</title>
+<script type="text/javascript" src="../../js/jquery-easyui-1.4.1/jquery.min.js"></script>
+<script src="../../js/qiniu/qiniu.js"  ></script>
+<script src="../../js/qiniu/plupload2.1.9.full.min.js"  ></script>
+<script src="../../js/common.js"  ></script>
+
+<script type="text/javascript">
+//供外部JS使用
+  var baseUrl = "${pageContext.request.contextPath}";
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+	//实例化编辑器
+	//建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+    //设置编辑器的内容
+//    um.setContent('hello');
+    //获取html内容，返回: <p>hello</p>
+//    var html = um.getContent();
+//    alert(html);
+//    //获取纯文本内容，返回: hello
+//    var txt = ue.getContentTxt();
+	//初始化七牛
+	initQiniu();
+
+	
+});
+
+</script>
+</head>
+<body>
+   <table>
+     	<tr >
+			<td align="right"> 
+				<label >商品图片：（最多6张）</label>  
+			</td>
+			<td align="left" id="productPictureTd">
+			<button id="productPicture" style="width: 100px;height: 100px;padding-left: 5px;">
+					选择图片<br>375*375px
+				</button>
+				<div id="showPictures" style="display:inline-block; " disabled="disabled" >
+				</div>
+			</td>
+		</tr>
+		<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+   
+   </table>
+</body>
+<script type="text/javascript">
+/**
+	 * 七牛上传文件： 首选导入  qiniu1.0.14.js  和  plupload2.1.9.full.min.js
+	 * 步骤：  1、html的demo内容,可以自定义	<td align="left" id="bannerTd">
+ *										<button id="uploadBanner" style="width: 160px;"  class="btn btn-info" >选择文件</button>
+ *									</td>
+ *        2、把td的id值【bannerTd】，填写到 下面方法的 container  和  drop_element处；
+ *        3、把 button的id值【uploadBanner】，填写到下面的browse_button处
+ *        4、文件上传路径已经处理好  格式 为 /gcrcsUploadFile/2017/7/11/153950/firstClassBanner.png
+ *        5、上传成功后 处理的步骤在下面方法的 init --->  FileUploaded 中，可以获取文件路径，也可以获取到上传的域名
+ *        6、上传过程中，可以在init-->UploadProgress  中获得上传进度，给用户展示进度提示
+ *        7、页面展示效果可以参考这里的展示效果 ， 如果有更好的展示样式可以自定义  
+ *        
+	 */
+	function initQiniu() {
+	 	 //引入Plupload 、qiniu.js后
+	    var uploader = Qiniu.uploader({
+	        runtimes: 'html5,html4,flash',    //上传模式,依次退化
+	        browse_button: 'productPicture',       //上传选择的点选按钮，**必需**
+	        uptoken_url: baseUrl + '/uploadController/getQiniuUptoken.do',            //Ajax请求upToken的Url，**强烈建议设置**（服务端提供）
+	        // uptoken : '', //若未指定uptoken_url,则必须指定 uptoken ,uptoken由其他程序生成
+	        // unique_names: true, // 默认 false，key为文件名。若开启该选项，SDK为自动生成上传成功后的key（文件名）。
+	        // save_key: true,   // 默认 false。若在服务端生成uptoken的上传策略中指定了 `sava_key`，则开启，SDK会忽略对key的处理
+	        domain: qiniuDomainName,   //bucket 域名，下载资源时用到，**必需**
+	        get_new_uptoken: true,  //设置上传文件的时候是否每次都重新获取新的token
+	        container: 'productPictureTd',           //上传区域DOM ID，默认是browser_button的父元素，
+	        max_file_size: '2048mb',           //最大文件体积限制
+	        flash_swf_url: 'js/plupload/Moxie.swf',  //引入flash,相对路径
+	        unique_names: false ,              //true生成唯一的文件名称
+	        save_key: false,
+	        max_retries: 3,                   //上传失败最大重试次数
+	        dragdrop: true,                   //开启可拖曳上传
+	        drop_element: 'productPicture',        //拖曳上传区域元素的ID，拖曳文件或文件夹后可触发上传
+	        chunk_size: '0mb',                //分块上传时，每片的体积
+	        auto_start: true,                 //选择文件后自动上传，若关闭需要自己绑定事件触发上传
+	        init: {
+	            'FilesAdded': function(up, files) {
+	                plupload.each(files, function(file) {
+	                    // 文件添加进队列后,处理相关的事情
+	                });
+	            },
+	            'BeforeUpload': function(up, file) {
+	                   // 每个文件上传前,处理相关的事情
+	            },
+	            'UploadProgress': function(up, file) {
+	                   // 每个文件上传时,处理相关的事情
+	            	//获取上传进度
+	            	var percent = file.percent;
+	            	//上传提示
+	  	            $("#productPicture").text("已上传" + percent + "%");
+	            },
+	            'FileUploaded': function(up, file, info) {
+	            	console.log(info);
+	            	console.log(up);
+               // 每个文件上传成功后,处理相关的事情
+               // 其中 info 是文件上传成功后，服务端返回的json，形式如
+               // {
+               //    "hash": "Fh8xVqod2MQ1mocfI4S4KpRL6D98",
+               //    "key": "gogopher.jpg"
+               //  }
+               // 参考http://developer.qiniu.com/docs/v6/api/overview/up/response/simple-response.html
+        	   
+               var domain = up.getOption('domain');
+               var obj = JSON.parse(info);
+               var url = domain + obj.key;
+
+               var lengthBefore = picArray.length;
+               if(lengthBefore >= 6){
+            	   $("#productPicture").text("最多6张主图！");
+            	   msgPrompt("最多只能上传6张主图！",3);
+            	   return ;
+               }
+               picArray[lengthBefore] = obj.key;
+               
+               listPic(picArray);
+	               
+	            },
+	            'Error': function(up, err, errTip) {
+	                   //上传出错时,处理相关的事情
+	            },
+	            'UploadComplete': function() {
+	                   //队列文件处理完毕后,处理相关的事情
+	            },
+	            'Key': function(up, file) {
+	                // 若想在前端对每个文件的key进行个性化处理，可以配置该函数
+	                // 该配置必须要在 unique_names: false , save_key: false 时才生效
+	            	//key就是上传的文件路径
+	                var key = "";
+	                //获取年月日时分秒
+	                var date = new Date();
+  	            var year = date.getFullYear();
+  	            var month = date.getMonth()+1;
+  	            var day = date.getDate();
+  	            var hour = date.getHours();
+  	            var minute = date.getMinutes();
+  	            var second = date.getSeconds();
+  	            key += 'sysUploadFile/' + year+'/'+month+'/'+day+'/'+hour+minute+second +'/';
+  	            var fileName =  new Date().getTime() + "." + file.name.split(".")[file.name.split(".").length-1];
+  	            key += fileName;
+	                return key ;
+	            }
+	        }
+	    });
+}
+ //---------------------------------------------------------------------
+</script>
+
+</html>

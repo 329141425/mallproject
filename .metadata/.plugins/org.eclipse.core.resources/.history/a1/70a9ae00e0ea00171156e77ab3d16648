@@ -1,0 +1,12 @@
+package cn.e3mall.pojo;
+
+import java.io.Serializable;
+
+public class SearchItem implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7826787432133276387L;
+
+}

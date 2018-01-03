@@ -1,0 +1,14 @@
+package cn.e3mall.service;
+
+import cn.e3mall.common.pojo.EasyUIDataGridResult;
+import cn.e3mall.common.utils.TaotaoResult;
+import cn.e3mall.pojo.TbItem;
+
+public interface ItemService {
+	TbItem getItemById(long id);
+	//分页查询商品列表
+	public EasyUIDataGridResult getItemList(int page, int rows);
+	//添加商品
+	TaotaoResult addItem(TbItem tbItem,String desc);
+
+}

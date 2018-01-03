@@ -1,0 +1,15 @@
+import org.junit.Test;
+
+import redis.clients.jedis.Jedis;
+
+public class jedisTest01 {
+	@Test
+	public void testJedis(){
+		Jedis jedis  =new Jedis("123.56.220.43", 6379);
+		String result = jedis.get("a");
+		System.out.println(result);
+		jedis.close();
+		
+	}
+
+}

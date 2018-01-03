@@ -1,0 +1,13 @@
+package cn.e3mall.search.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import cn.e3mall.search.service.SearchItemService;
+
+@Controller
+public class SearchController {
+	@Autowired
+	private SearchItemService  searchItemService;
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;qiniu.js&apos; to &apos;qiniu&apos;&#x0D;&#x0A;- Original project: &apos;e3-manager-web&apos;&#x0D;&#x0A;- Destination element: &apos;qiniu&apos;&#x0D;&#x0A;- Original element: &apos;qiniu.js&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move file" element1="src/main/webapp/js/qiniu.js" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1509808163752" target="src/main/webapp/js/qiniu" units="0" version="1.0"/>
+</session>

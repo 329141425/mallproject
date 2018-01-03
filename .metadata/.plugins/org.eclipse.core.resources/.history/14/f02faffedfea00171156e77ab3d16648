@@ -1,0 +1,7 @@
+package cn.e3mall.pojo;
+
+import java.io.Serializable;
+
+public class SearchItem implements Serializable{
+
+}

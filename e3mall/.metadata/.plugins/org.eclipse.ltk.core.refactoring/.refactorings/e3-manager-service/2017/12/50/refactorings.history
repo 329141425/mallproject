@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;genItemId&apos; from expression &apos;IDUtils.genItemId()&apos;&#x0D;&#x0A;- Original project: &apos;e3-manager-service&apos;&#x0D;&#x0A;- Variable name: &apos;genItemId&apos;&#x0D;&#x0A;- Destination method: &apos;cn.e3mall.service.impl.ItemServiceImpl.addItem()&apos;&#x0D;&#x0A;- Variable expression: &apos;IDUtils.genItemId()&apos;&#x0D;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;genItemId&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src\/main\/java&lt;cn.e3mall.service.impl{ItemServiceImpl.java" name="genItemId" replace="true" selection="1425 0" stamp="1512908314167" version="1.0"/>
+</session>

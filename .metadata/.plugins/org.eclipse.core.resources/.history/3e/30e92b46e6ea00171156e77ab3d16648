@@ -1,0 +1,15 @@
+package cn.e3mall.search.service.impl;
+
+import org.springframework.stereotype.Service;
+
+import cn.e3mall.search.service.SearchItemService;
+import utils.TaotaoResult;
+@Service
+public class SearchItemServiceImpl  implements SearchItemService {
+
+	@Override
+	public TaotaoResult importAllItems() {
+		return null;
+	}
+
+}

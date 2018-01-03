@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="172" key="CommitDialog.location.y"/>
+	<item value="275" key="CommitDialog.location.x"/>
+	<item value="500" key="CommitDialog.weights.0"/>
+	<item value="500" key="CommitDialog.weights.1"/>
+	<item value="" key="DirectorySelectionPage.lastParent_https://desktop-ndoht79:8443/svn/e3mall/trunk"/>
+	<item value="515" key="CommitDialog.size.y"/>
+	<item value="1370" key="CommitDialog.size.x"/>
+	<item value="trunk" key="DirectorySelectionPage.lastParent_https://desktop-ndoht79:8443/svn/e3mall"/>
+	<item value="503" key="ChooseUrlDialog.size.x"/>
+	<item value="398" key="ChooseUrlDialog.size.y"/>
+	<item value="https://desktop-ndoht79:8443/svn/e3mall" key="RepositorySelectionPage.lastRepository"/>
+	<item value="709" key="ChooseUrlDialog.location.x"/>
+	<item value="204" key="ChooseUrlDialog.location.y"/>
+	<section name="CommitWizard">
+		<item value="500" key="VWeight2"/>
+		<item value="500" key="VWeight1"/>
+		<item value="false" key="ShowCompare"/>
+	</section>
+	<section name="IgnoreResourcesDialog">
+		<item value="0" key="Action"/>
+	</section>
+	<section name="NewLocationWizard">
+		<list key="ConfigurationWizardMainPage.STORE_URL_ID">
+			<item value="https://DESKTOP-NDOHT79:8443/svn/e3mall/"/>
+			<item value=""/>
+			<item value="https://DESKTOP-NDOHT79:8443/svn/e3mall/trunk"/>
+		</list>
+	</section>
+</section>
